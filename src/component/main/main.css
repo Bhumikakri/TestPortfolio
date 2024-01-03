@@ -1,0 +1,66 @@
+.main{
+    max-width: 100vw;
+    height: max-content;
+    /* border:2px solid red; */
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    gap: 2rem;
+    position: relative;
+    padding-bottom: 5rem;
+    background-color: #22CDF8;
+}
+.Rigtside{
+    width: 65%;
+    height: fit-content;
+    min-height: 200vh;
+    border-radius: 15px;
+    border: 1px solid rgb(0, 0, 0);
+    position: relative;
+    background-color: #21859F;
+}
+.uppermain{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    /* align-items: center; */
+    color: white;
+    justify-content: space-between;
+    /* border: 2px solid rgb(10, 8, 8); */
+}
+.uppermain h1{
+    padding-left: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.uppermain h1 span{
+    width: 30px;
+    height: 5px;
+    border-radius: 20px;
+    padding: 0.1rem;
+    background-color: #ffdb70;
+}
+.allButtons{
+    width: 60%;
+    height: 70%;
+    /* border: 2px solid red; */
+}
+.Ab{
+    border-bottom-left-radius: 20px;
+    color: #ffdb70;
+}
+.uppermain button{
+    height: 100%;
+    width: 20%;
+    border: none;
+    font-size: 1rem;
+    font-weight: 500;
+    background-color: #284249;
+    color: #D6D6D6;
+    cursor: pointer;
+}
+
+.Con{
+    border-top-right-radius: 15px;
+}
