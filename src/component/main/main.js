@@ -9,9 +9,11 @@ import Contact from "../Contact/Contact";
 
 const Main = () => {
   const [DisplayPage, setDisplayPage] = useState("About Me");
+  const [activeButton, setActiveButton] = useState("About"); 
 
   const getDisplaypage = (value) => {
     setDisplayPage(value);
+    setActiveButton(value.split(" ").join(""));
   };
 
   return (
@@ -24,27 +26,47 @@ const Main = () => {
             <span></span>
           </h1>
           <div className="allButtons">
-            <button className="Ab" onClick={() => getDisplaypage("About Me")}>
-              About
-            </button>
-            <button onClick={() => getDisplaypage("Certificates")}>
-              Certificates
-            </button>
-            <button onClick={() => getDisplaypage("Projects")}>Projects</button>
-            <button onClick={() => getDisplaypage("More")}>More</button>
-            <button className="Con" onClick={() => getDisplaypage("Contact")}>
-              Contact
-            </button>
-          </div>
+  <button
+    className={activeButton === "AboutMe" ? "Ab active" : "Ab"}
+    onClick={() => getDisplaypage("About Me")}
+  >
+    About
+  </button>
+  <button
+    className={activeButton === "MyCertificates" ? "active" : ""}
+    onClick={() => getDisplaypage("My Certificates")}
+  >
+    Certificates
+  </button>
+  <button
+    className={activeButton === "MyProjects" ? "active" : ""}
+    onClick={() => getDisplaypage("My Projects")}
+  >
+    Projects
+  </button>
+  <button
+    className={activeButton === "SideProjects" ? "active" : ""}
+    onClick={() => getDisplaypage("Side Projects")}
+  >
+    More
+  </button>
+  <button
+    className={activeButton === "Contact" ? "Con active" : "Con"}
+    onClick={() => getDisplaypage("Contact")}
+  >
+    Contact
+  </button>
+</div>
+
         </div>
         <div>
           {DisplayPage === "About Me" ? (
             <About />
-          ) : DisplayPage === "Certificates" ? (
+          ) : DisplayPage === "My Certificates" ? (
             <Certificates />
-          ) : DisplayPage === "Projects" ? (
+          ) : DisplayPage === "My Projects" ? (
             <Projects />
-          ) : DisplayPage === "More" ? (
+          ) : DisplayPage === "Side Projects" ? (
             <More />
           ) : (
             <Contact />
