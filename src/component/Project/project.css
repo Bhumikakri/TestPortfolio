@@ -1,0 +1,137 @@
+.Projects{
+  padding: 1rem;
+}
+
+.filterlist {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 25px;
+  padding-left: 5px;
+  margin-bottom: 30px;
+}
+.filteritem {
+  list-style: none;
+  cursor: pointer;
+  color: rgb(239, 239, 240);
+}
+  
+.filteritem:hover {
+  color: rgba(218, 218, 221, 0.76);
+}
+  
+  .filteritem.selected {
+    color: rgb(255, 214, 78);
+  }
+  
+  .projectlist {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 10px;
+  }
+  
+  .projectitem {
+    display: block;
+  }
+  
+  .projectitem:hover .projectimg::before {
+    background: rgba(75, 68, 68, 0.479);
+  }
+  
+  .projectitem:focus {
+    outline-color: rgb(255, 214, 78);
+  }
+  
+  .projectitem  a {
+    width: 100%;
+  }
+  
+  .projectimg {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 15px;
+  }
+  
+  .projectimg::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    z-index: 1;
+    transition: 0.25s ease;
+  }
+  
+  .projectimg img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.25s ease;
+  }
+  
+  .projecttitle,
+  .projectcategory,
+  .projectdevelopment {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .projecttitle {
+    color: white;
+    text-transform: capitalize;
+    line-height: 1.3;
+    margin-bottom: 3px;
+  }
+  
+  .projectcategory {
+    color: hsla(0, 0%, 84%, 0.7);
+    font-size: 15px;
+    font-weight: 300;
+  }
+  
+  .projectdevelopment {
+    color: hsla(0, 0%, 84%, 0.7);
+    font-size: 15px;
+    font-weight: 300;
+  }
+  
+  .projectbuttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    gap: 4px;
+  }
+  
+  .projectbuttons a {
+    flex: 1 1 auto;
+    min-width: 200px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(10, 9, 9, 0.158);
+    margin: 0 5px;
+    padding: 2px 10px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: rgb(255, 214, 78);
+    font-size: 17px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  .projectbuttons a:hover {
+    background-color: rgba(28, 28, 29, 0.452);
+  }
+  
+  .projectbuttons ion-icon {
+    margin-right: 5px;
+  }
