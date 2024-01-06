@@ -37,7 +37,8 @@ const PrimeryF = () => {
                   width: "80%",
                   display: "flex",
                   flexDirection: "column",
-                  alignItems: "center",
+                //   alignItems: "center",
+                gap:"1rem",
                   justifyItems: "center",
                 }}
               >
